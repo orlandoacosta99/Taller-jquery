@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Punto dos</title>
+    <!--Importar fuente de icono de Google-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Importar materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <!--Deja que el navegador sepa que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <form>
+        <!--Inicio del contenedor de la pagina-->
+        <div class="container">
+            <div class="col s12 card-panel ">
+                <br>
+                <a class="btn-large" href="../index.html">Home</a>
+                <a class="btn-large" href="puntoUno.html">Punto 1</a>
+                <a class="btn-large" href="PuntoDos.html">Punto 2</a>
+                <br/>
+                <br/>
+            </div>
+            <h4>Calculadora de saldo con IVA</h4>
+            <div class="row">
+                <div class="input-field col s3">
+                    <input id="txtValor" type="text" class="validate" style="text-align: right;" onblur="calcularTotalIvaConDescuento(true);">
+                    <label for="txtValor">Ingrese un valor</label>
+                </div>
+                <div class="input-field col s3" style="text-align: right;">
+                    <input type="submit" class="btn-large" value="Limpiar">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s3" style="text-align: right;">
+                    <label style="color: black;"><b>Porcetaje IVA:</b></label>
+                </div>
+                <div class="input-field col s1">
+                    <label id="lblIva" style="color: black;">%16</label>
+                </div>
+            </div>
+            <div id="divDescuento" class="row" style="display: none;">
+                <div class="input-field col s3" style="text-align: right;">
+                    <label style="color: black;"><b>Descuento:</b></label>
+                </div>
+                <div class="input-field col s1">
+                    <label id="lblDescuento" style="color: black;"></label>
+                </div>
+            </div>
+            <div id="divResultado" style="display: none;">
+                <div class="row">
+                    <div class="input-field col s3" style="text-align: right;">
+                        <label style="color: black;"><b>Subtotal:</b></label>
+                    </div>
+                    <div class="input-field col s1" style="text-align: left;">
+                        <label style="color: black;" id="lblSubTotal"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3" style="text-align: right;">
+                        <label style="color: black;"><b>Valor IVA:</b></label>
+                    </div>
+                    <div class="input-field col s1" style="text-align: left;">
+                        <label style="color: black;" id="lblValorIva"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3" style="text-align: right;">
+                        <label style="color: black;"><b>Valor descuento IVA:</b></label>
+                    </div>
+                    <div class="input-field col s1" style="text-align: left;">
+                        <label style="color: black;" id="lblValorDescuentoIVA"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3" style="text-align: right;">
+                        <label style="color: black;"><b>Total:</b></label>
+                    </div>
+                    <div class="input-field col s1" style="text-align: left;">
+                        <label style="color: black;" id="lblTotal"></label>
+                    </div>
+                </div>
+            </div>
+            <div id="divBontonAceptar" class="row" style="display: none;">
+                <div class="input-field col s6" style="text-align: right;">
+                    <a class="waves-effect waves-light btn-large" onclick="calcularTotalIvaConDescuento(false);">Aceptar</a>
+                </div>
+            </div>
+        </div>
+        <!--Fin del contenedor de la pagina-->
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--JavaScript al final del cuerpo para una carga optimizada-->
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/puntoDos.js"></script>
+
+</html>

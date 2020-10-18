@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Punto uno</title>
+    <!--Importar fuente de icono de Google-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Importar materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <!--Deja que el navegador sepa que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="Utf-8" />
+</head>
+
+<body>
+    <form>
+        <!--Inicio del contenido de la pagina-->
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="col s12 card-panel ">
+                        <br>
+                        <a class=" btn-large" href="../index.html">Home</a>
+                        <a class=" btn-large" href="puntoUno.html">Punto 1</a>
+                        <a class=" btn-large" href="PuntoDos.html">Punto 2</a>
+                        <br/>
+                        <br/>
+                    </div>
+
+                    <h4>Caluladora de salario</h4>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input id="txtSalario" type="text" style="text-align: right;">
+                            <label for="txtSalario">Salario</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="txtHoraEntrada" type="text" class="timepicker">
+                            <label for="txtHoraEntrada">Hora de entrada</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="txtHoraSalida" type="text" class="timepicker">
+                            <label for="txtHoraSalida">Hora de salida</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label>Nivel riesgo profecionan</label>
+                            <br/>
+                            <br/>
+                            <select id='ddlLetraClave' style="display: initial; background: transparent; border: 1px solid #9e9e9e;">
+                                <option value="-1" selected>--Seleccione--</option>
+                                <option value="1">Nivel 1</option>
+                                <option value="2">Nivel 2</option>
+                                <option value="3">Nivel 3</option>
+                                <option value="4">Nivel 4</option>
+                                <option value="5">Nivel 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s3" style="text-align: right;">
+                            <label style="color: black;">
+                                <b>Salario mensual:</b>
+                            </label>
+                        </div>
+                        <div class="input-field col s3" style="text-align: right;">
+                            <label id="lblSalario" style="color: black;"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12" style="text-align: right;">
+                            <a id="btnCalcularSalario" class="waves-effect waves-light btn-large">Calcular salario</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fin del contenido de la pagina-->
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--JavaScript al final del cuerpo para una carga optimizada-->
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/puntoUno.js"></script>
+
+</html>
