@@ -1,6 +1,7 @@
 var porcentajeRiesgoProfecional = [1.25, 2.25, 3.25, 4.25, 5.25];
 
 $(document).ready(function () {
+    //Eleccion de la Hora de entrada y salida de turno
     $('input.timepicker').timepicker({});
 
     $('#txtSalario').on('input', function () {
@@ -24,6 +25,7 @@ $(document).ready(function () {
     });
 
     $('#btnCalcularSalario').click(function () {
+        //Funcion para calcular el salario
         var salarioFinal;
         var valorRecargo;
         var salario = $('#txtSalario').val();
@@ -54,6 +56,8 @@ $(document).ready(function () {
         if (nivelRiesgoProfecional != '-1') {
             valorNiveRiesgoProfecional = parseInt(salario) * porcentajeRiesgoProfecional[parseInt(nivelRiesgoProfecional) - 1] / 100;
         }
+
+        // Horas Extras
 
         if (horaEntrada === '08:00 AM' && horaSalida === '10:00 PM') {
             porcentajeHoras = 10 / 100;
